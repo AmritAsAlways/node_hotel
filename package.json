@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "its a nodejs tutorial ",
+  "main": "first.js",
+  "dependencies": {
+    "ansi-regex": "^4.1.1",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9",
+    "prompt-sync": "^4.2.0",
+    "strip-ansi": "^5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon makingaserver.js"
+  },
+  "author": "Amrit Raj",
+  "license": "ISC"
+}
