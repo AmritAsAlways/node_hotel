@@ -115,6 +115,11 @@ router.delete('/:uniqueId', async (req,res)=>{
         const ID = req.params.uniqueId;  //extract the data from the url parameter 
 
         const response = await person.findByIdAndDelete(ID);
+        //an important point here to be noted that if in the input you have put an invalid id then it will throw 
+        //an internal server error only if the id given by you is valid according to the id syntax but the id 
+        //given is not matching with the current id's it have in that case only 
+        //it will give person not found error 
+
         if(!response){  //if no response if given 
             return res.status(404).json({ error: 'Person not found'});
         }
