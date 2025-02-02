@@ -4,10 +4,16 @@ const express = require('express')
 // app we have made a blueprint of the express
 const app = express()
 
+require('dotenv').config();
+const port = process.env.PORT || 3000;
+
+
 const db=require('./database.js');
 
 const bodyParser=require('body-parser');
 app.use(bodyParser.json())
+
+
 
 //this method is used to get information from the server 
 // and to get the information we use '/'
@@ -46,7 +52,9 @@ app.use('/chola_bhatura',Menuroutes);
 //ye code bata raha hai ki server port 3000 pe jinda hai abhi 
 //here 3000 is the port or the house of the server 
 
-app.listen(3000,()=>{
+
+
+app.listen(port,()=>{
     console.log("server is listening on the port 3000");
 });
 //now to jinda kaise karte hai isko run kardoo 

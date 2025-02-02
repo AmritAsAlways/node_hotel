@@ -2,10 +2,15 @@
 //mongodb hamme bana banaya server already provide kardeta hai 
 
 const mongoose=require('mongoose');
+require('dotenv').config();
 
 //Define the mongodb connection url 
-const mongourl='mongodb://localhost:27017/hotels' //you can replace mydatabase with your 
+//this is mongodb compass url
+//const mongourl=process.env.DB_URL_local;   //you can replace mydatabase with your 
 //database name
+
+//this is mongodb atlas url 
+const mongourl = process.env.DB_URL;
 
 mongoose.connect(mongourl,{
     useNewUrlParser:true,
